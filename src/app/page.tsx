@@ -1,9 +1,6 @@
-import React from 'react'
 
-export default function page() {
+export default function Home() {
   return (
-    <div>
-      home
-    </div>
-  )
+    <div>Home</div>
+  );
 }
