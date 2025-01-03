@@ -45,7 +45,6 @@ export default function Header() {
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           {theme === "light" ? <FaSun /> : <FaMoon />}
-          <FaMoon />
         </Button>
         <SignedIn>
           <UserButton
