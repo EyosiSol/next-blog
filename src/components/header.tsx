@@ -51,7 +51,6 @@ export default function Header() {
             appearance={{
               baseTheme: theme === "light" ? undefined : dark,
             }}
-            userProfileUrl="/dashboard?tab=profile"
           />
         </SignedIn>
         <SignedOut>
