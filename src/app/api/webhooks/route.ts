@@ -69,7 +69,8 @@ export async function POST(req: Request) {
         email_addresses,
         username,
       });
-      
+      console.log("User created or updated successfully");
+
       if (user && eventType === "user.created") {
         try {
           await clerkClient.users.updateUserMetadata(id, {
