@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
-import { dark, neobrutalism } from "@clerk/themes";
 import ThemeComponent from "@/components/ThemeComponent";
 import { ThemeModeScript } from "flowbite-react";
 const geistSans = Geist({
