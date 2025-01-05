@@ -22,7 +22,7 @@ export default function Header() {
           gradientDuoTone="purpleToPink"
           className="w-fit rounded-lg inline-block font-bold"
         >
-          Eyosia&apos;s
+          Eyosias&apos;s
         </Button>
         Blog
       </Link>
