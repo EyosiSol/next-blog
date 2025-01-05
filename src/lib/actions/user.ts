@@ -3,12 +3,12 @@ import User from "../models/user.model";
 import { connect } from "../mongodb/mongoose";
 
 type clerkInfo = {
-  id: string;
-  first_name: string;
-  last_name: string;
-  image_url: string;
+  id: string | null;
+  first_name: string | null;
+  last_name: string | null;
+  image_url: string | null;
   email_addresses: { email_address: string }[]; // Corrected type
-  username: string;
+  username: string | null;
 };
 export const createOrUpdateUser = async ({
   id,
