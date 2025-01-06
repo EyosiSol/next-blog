@@ -74,15 +74,15 @@ export async function POST(req: Request) {
       evt.data;
 
     try {
-      const safeUsername = username || `user_${id}`;
-      const user = await createOrUpdateUser({
+      // const safeUsername = username || `user_${id}`;
+      const user = await createOrUpdateUser(
         id,
         first_name,
         last_name,
         image_url,
         email_addresses,
-        username: safeUsername,
-      });
+        username
+      );
       console.log("user:", user);
       console.log("User created or updated successfully");
 
