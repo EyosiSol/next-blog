@@ -2,22 +2,22 @@ import User from "../models/user.model";
 
 import { connect } from "../mongodb/mongoose";
 
-// type clerkInfo = {
-//   id: string;
-//   first_name: string;
-//   last_name: string;
-//   image_url: string;
-//   email_addresses: { email_address: string }[]; // Corrected type
-//   username: string;
-// };
-export const createOrUpdateUser = async (
-  id: string,
-  first_name: string | null,
-  last_name: string | null,
-  image_url: string | null,
-  email_addresses: { email_address: string }[],
-  username: string
-) => {
+type clerkInfo = {
+  id: string;
+  first_name: string | null;
+  last_name: string | null;
+  image_url: string | null;
+  email_addresses: { email_address: string }[]; // Corrected type
+  username: string | null;
+};
+export const createOrUpdateUser = async ({
+  id,
+  first_name,
+  last_name,
+  image_url,
+  email_addresses,
+  username,
+}: clerkInfo) => {
   try {
     await connect();
     const user = await User.findOneAndUpdate(
@@ -39,7 +39,7 @@ export const createOrUpdateUser = async (
   }
 };
 
-export const deleteUser = async (id : string) => {
+export const deleteUser = async (id: string) => {
   try {
     await connect();
     await User.findOneAndDelete({ clerkId: id });
